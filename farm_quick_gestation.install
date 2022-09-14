@@ -1,0 +1,15 @@
+<?php
+function farm_quick_gestation_update_7000(&$sandbox){
+    $module = "farm_quick";
+    if (!module_exists($module)) {
+        module_enable(array($module));
+    }
+}
+
+function farm_quick_gestation_update_7001(&$sandbox){
+    $enabled_quick_forms = variable_get('farm_quick_forms_enabled',array());
+    if(empty($enabled_quick_forms['quick_gestation'])){
+        $enabled_quick_forms['quick_gestation'] = 'quick_gestation';
+        variable_set('farm_quick_forms_enabled',$enabled_quick_forms);
+      }
+}

@@ -1,0 +1,8 @@
+name = Quick Gestation Form
+description = Adds a Quick Form for calculating gestation time for various animals.
+core = 7.x
+package = farmOS Contrib
+dependencies[] = farm_asset
+dependencies[] = farm_log_observation
+dependencies[] = farm_livestock
+dependencies[] = farm_quick
